@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+         https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+
+    <display-name>LoginRolesApp</display-name>
+
+    <!-- ================================================= -->
+    <!--       SERVLET DE LOGIN                           -->
+    <!-- ================================================= -->
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.loginrolesapp.controlador.LoginServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- ================================================= -->
+    <!--       SERVLET DE USUARIOS (para admin)            -->
+    <!-- ================================================= -->
+    <servlet>
+        <servlet-name>UsuarioServlet</servlet-name>
+        <servlet-class>com.loginrolesapp.controlador.UsuarioServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UsuarioServlet</servlet-name>
+        <url-pattern>/UsuarioServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- ================================================= -->
+    <!--       SERVLET DE PRODUCTOS (cliente)              -->
+    <!-- ================================================= -->
+    <servlet>
+        <servlet-name>ProductoServlet</servlet-name>
+        <servlet-class>com.loginrolesapp.controlador.ProductoServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ProductoServlet</servlet-name>
+        <url-pattern>/ProductoServlet</url-pattern>
+    </servlet-mapping>
+
+ <!-- ✅ SERVLET ADMINISTRADOR DE PRODUCTOS -->
+    <servlet>
+        <servlet-name>ProductoAdminServlet</servlet-name>
+        <servlet-class>com.loginrolesapp.controlador.ProductoAdminServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ProductoAdminServlet</servlet-name>
+        <url-pattern>/ProductoAdminServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- ================================================= -->
+    <!--       SERVLET DEL CARRITO                         -->
+    <!-- ================================================= -->
+    <servlet>
+        <servlet-name>CarritoServlet</servlet-name>
+        <servlet-class>com.loginrolesapp.controlador.CarritoServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CarritoServlet</servlet-name>
+        <url-pattern>/CarritoServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- ================================================= -->
+    <!--       SERVLET DE LOGOUT                           -->
+    <!-- ================================================= -->
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>com.loginrolesapp.controlador.LogoutServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/LogoutServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- ================================================= -->
+    <!--        CONFIGURACIONES GENERALES                  -->
+    <!-- ================================================= -->
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+</web-app>
